@@ -27,3 +27,14 @@ const tinderUSer = {
 console.log(Object.keys(tinderUSer));
 console.log(Object.values(tinderUSer));
 console.log(Object.entries(tinderUSer));
+
+// de-structing
+
+const course = {
+    courseName: "JavaScript",
+    amount: 999,
+    courseInstructor: "Shivam"
+}
+
+const {courseInstructor: Instructor} = course
+console.log(Instructor);
