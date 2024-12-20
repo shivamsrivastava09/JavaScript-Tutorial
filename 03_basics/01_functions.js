@@ -15,4 +15,23 @@ function loginUserMessage(username = "sam"){
 // default value of username is sam
     return `${username} just logged in`
 }
-console.log(loginUserMessage("Shivam"))
+// console.log(loginUserMessage("Shivam"))
+
+function calculateCartPrice (...num1){
+    // Spread Operator ...
+    return num1    
+}
+
+//console.log(calculateCartPrice(200,400,600,800))
+
+const user = {
+    username:"Shivam",
+    price:199
+}
+
+function handleObject(anyObject){
+    console.log(`UserName is ${anyObject.username} and price is ${anyObject.price}`);
+    
+}
+
+handleObject(user)
