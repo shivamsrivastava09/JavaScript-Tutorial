@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code</title>
+</head>
+<style>
+    .bg-black{
+        background-color: black;
+        color: aliceblue;
+    }
+</style>
+<body class="bg-black">
+
+    
+</body>
+// creating a new Element and attaching it to my web page.
+<script>
+    const div = document.createElement('div')
+    div.className = "main"
+    div.id = Math.round(Math.random()*10+1)
+    div.setAttribute("title", "generated title")
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+    //div.innerHTML = "Hello World !!"
+    const addText = document.createTextNode("Hello World !!")
+    div.appendChild(addText)
+    document.body.appendChild(div)
+</script>
+</html>

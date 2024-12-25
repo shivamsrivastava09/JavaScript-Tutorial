@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .bg-black{
+        background-color: black;
+        color: aliceblue;
+    }
+</style>
+<body class="bg-black">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parr = document.querySelector('.parent')
+    for (let i = 0; i < parr.children.length; i++) {
+        const element = parr.children[i];
+        console.log(element.innerHTML);                        
+    }
+    
+</script>
+</html>
