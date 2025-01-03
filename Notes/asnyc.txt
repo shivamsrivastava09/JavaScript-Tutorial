@@ -1,0 +1,21 @@
+/*
+    JavaScript : 
+        synchronus
+        single Threaded
+    Execution Context :
+        execute one line of the code at a time.
+        execute the code in the order it is written.
+        each operation wait for the last to execute.
+        
+
+    Blocking code and Non-Blocking code
+        the blocking code blocks the execution of the code whereas the non-blocking
+        code does not block the execution of the code.
+        Reads the file synchronus whereas the file reads async.
+`    
+    Js engine is Single Threaded.
+    Js engine is Synchronus.
+    Task Quque makes the engine async.
+    Promise Quque is a high priority Quque.
+    fetch is a high priority.
+*/
