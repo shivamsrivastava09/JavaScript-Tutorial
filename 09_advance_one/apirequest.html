@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Call</title>
+</head>
+<body style="background-color: black; color: aliceblue; display: flex;">
+    <div class="main" id="main">
+
+    </div>    
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/shivamsrivastava09'
+    let data = ""
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET', requestUrl)
+    xhr.onreadystatechange = function(){
+        if(xhr.readyState === 4){
+            data = JSON.parse(this.responseText)
+            console.log(data);            
+            console.log(data.followers);  
+            addImage(data.avatar_url) 
+            addFollowers(data.followers)         
+        }
+    }
+    xhr.send()
+    function addImage(imgUrl){
+        const img = document.createElement('img')
+        img.src = `${imgUrl}`
+        img.setAttribute("heigth", "200px")
+        img.setAttribute("width", "200px")
+        document.querySelector('#main').appendChild(img)
+    }
+
+    function addFollowers(followers){
+        const folowersList = document.createElement('h2')
+        folowersList.appendChild(document.createTextNode(followers))
+        document.querySelector('#main').appendChild(folowersList)
+    }
+    
+</script>
+</html>
